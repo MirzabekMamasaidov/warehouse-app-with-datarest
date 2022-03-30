@@ -22,8 +22,6 @@ public class Category {
     @Column(nullable = false)
     private Boolean active=true;
 
-    @ManyToOne
-    private Category parentCategory;
 
 
 }

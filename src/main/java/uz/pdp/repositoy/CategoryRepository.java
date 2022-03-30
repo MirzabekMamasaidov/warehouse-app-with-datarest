@@ -1,11 +1,13 @@
 package uz.pdp.repositoy;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 import uz.pdp.entity.Category;
 import uz.pdp.entity.User;
+import uz.pdp.projection.CustomCategory;
 
-@Repository
+@RepositoryRestResource(path = "category",excerptProjection = CustomCategory.class)
 public interface CategoryRepository extends JpaRepository<Category,Integer> {
 
 }
